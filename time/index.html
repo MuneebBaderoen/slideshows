@@ -4,207 +4,107 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Time</title>
 
 		<link rel="stylesheet" href="../revealjs/css/reveal.css">
 		<link rel="stylesheet" href="../revealjs/css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- Introduction -->
-				<section>
-					<section data-markdown data-autoslide="10000">
-						<textarea data-template>
-							# Culture of code quality
-						</textarea>
-					</section>
-					<section data-markdown data-autoslide="10000">
-						<textarea data-template>
-							There are at least two developers on every software project
-						</textarea>
-					</section>
-					<section data-markdown data-autoslide="10000">
-						<textarea data-template>
-							You, and you in 6 months time
-						</textarea>
-					</section>
-					<section data-markdown data-autoslide="10000">
-						<textarea data-template>
-							- What is code quality?
-							- Sustaining code quality
-							- Good commit messages
-						</textarea>
-					</section>
+				<section data-markdown>
+					<textarea data-template>
+						# Time
+					</textarea>
 				</section>
-
-				<!-- What is code quality -->
-				<section>
-					<section data-markdown data-autoslide="35000">
-						<textarea data-template>
-							# What is code quality?
-						</textarea>
-					</section>
-					<section data-markdown data-autoslide="7000">
-						<textarea data-template>
-							Pull requests/Code reviews factor in each of these phases, so I won't list it each time
-						</textarea>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							## Is this _necessary_ code?
-
-							- Discussions IRL
-							- Slack(?) messages
-						</textarea>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							## Is this good code?
-
-							- Linting
-							- Cyclomatic complexity
-							- Code climate?
-						</textarea>
-					</section>
-					<section data-markdown data-autoslide="35000">
-						<textarea data-template>
-							## Will its story live on?
-
-							- Names of functions and variables
-							- Names of files and folders
-							- Comments
-							- Commit messages
-							- Branch names
-						</textarea>
-					</section>
+				<section data-markdown>
+					<textarea data-template>
+						_When_ you ask a question, is just as important as the question itself
+					</textarea>
 				</section>
-
-				<!-- Maintaining code -->
-				<section>
-					<section data-markdown>
-						<textarea data-template>
-							# Sustaining code quality
-						</textarea>
-					</section>
-					<section data-transition="slide-in fade-out" data-autoslide="4000">
-						<h2>Bad code comes from</h2>
-						<img class="stretch" src="./assets/PressureCycle/PressureCycle1.png" alt="LMGTFY"></img>
-					</section>
-					<section data-transition="fade-in fade-out" data-autoslide="4000">
-						<h2>Bad code comes from</h2>
-						<img class="stretch" src="./assets/PressureCycle/PressureCycle2.png" alt="LMGTFY"></img>
-					</section>
-					<section data-transition="fade-in fade-out" data-autoslide="12000">
-						<h2>Bad code comes from</h2>
-						<img class="stretch" src="./assets/PressureCycle/PressureCycle3.png" alt="LMGTFY"></img>
-					</section>
-					<section data-transition="fade-in fade-out" data-autoslide="85000">
-						<img class="stretch" src="./assets/code-complexity-spiral.svg"></img>
-					</section>
+				<section data-markdown data-transition="slide-in fade-out" >
+					<textarea data-template>
+						Functional programming
+					</textarea>
 				</section>
-
-				<!-- Commit messages -->
-				<section>
-					<section data-autoslide="35000">
-						<h2>Good commit messages</h2>
-						<img class="stretch" src="./assets/google_how_to_write_commit_messages.png" alt="LMGTFY"></img>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							### We often write messages like:
-
-							```text
-							f397a2a6f fixed some bug
-							86ba74ccb Added some functionality.
-							3bfab83d1 more fixes for a thing that needed fixing. Couldnt
-								get things working, so needed to write some code to get
-								things working.
-							```
-						</textarea>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							### If commits were about things you did
-
-							```text
-							f397a2a6f Went to get coffee
-							86ba74ccb started feeling kinda thirsty
-							a14681be1 Ate a donut
-							f2ff57049 Overslept this morning, made it for standup though
-							```
-						</textarea>
-					</section>
-					<section data-markdown data-autoslide="5000">
-						<textarea data-template>
-							### Commits are not about you
-						</textarea>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							### Commits are about code
-
-							A properly formed Git commit subject line should always be able to complete the following sentence:
-
-							---
-
-							If applied, this commit will _(your subject line here)_
-						</textarea>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							## Bad
-
-							- This commit will <span style="color:#E28473">_fixed bug with Y_</span>
-							- This commit will <span style="color:#E28473">_changing behavior of X_</span>
-							- This commit will <span style="color:#E28473">_more fixes for broken stuff_</span>
-						</textarea>
-					</section>
-					<section data-markdown data-autoslide="40000">
-						<textarea data-template>
-							## Good
-
-							- This commit will <span style="color:#68E468">_Add missing configuration_</span>
-							- This commit will <span style="color:#68E468">_Refactor subsystem X for readability_</span>
-							- This commit will <span style="color:#68E468">_Update the getting started guide_</span>
-							- This commit will <span style="color:#68E468">_Remove deprecated methods_</span>
-						</textarea>
-					</section>
+				<section data-markdown data-transition="fade-in fade-out">
+					<textarea data-template>
+						Functional thinking
+					</textarea>
 				</section>
+				<section data-markdown data-transition="fade-in fade-out">
+					<textarea data-template>
+						Being conscious of state and how we use it
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						assert_equal f(x), f(x)
+					</textarea>
+				</section>
+				<section data-markdown data-transition="fade-in fade-out">	
+					<textarea data-template>
+						Pure function
 
-				<section>
-					<section data-markdown data-autoslide="10000">
-						<textarea data-template>
-							## References
+						```ruby
+						def square(x)
+							x ** 2
+						end
+						```
+					</textarea>
+				</section>
+				<section data-markdown data-transition="fade-in fade-out">	
+					<textarea data-template>
+						Impure function
 
-							- [Bryan Helmkamp - Building a Culture of Code Quality](https://www.youtube.com/watch?v=IadcIkBeBuI)
-							- [David Peterson - Why do teams fail to sustain code quality?](http://blog.davidpeterson.co.uk/2011/04/why-do-agile-projects-fail-so-often.html)
-							- [Chris Beams - How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit)
-						</textarea>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							github.com/MuneebBaderoen/slideshows
+						```ruby
+						def f(x)
+						  @some_shared_variable+=1
+						end
+						```
+					</textarea>
+				</section>
+				<section data-markdown data-transition="fade-in fade-out">
+					<textarea data-template>
+						Impure function
 
-							---
-
-							### Questions
-							### Comments
-							### Rants
-						</textarea>
-					</section>
+						```ruby
+						def f(x)
+						  @some_shared_variable+=x
+						end
+						```
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						Impure functions are like boxes of chocolates
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						Correctness is hard, consistency is easy
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						- Pure function
+						- Impure function
+						- Side effect
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						Side effects. Wut
+					</textarea>
+				</section>
+				<section data-markdown data-state="last_slide">
+					<textarea data-template>
+						Last slide	
+					</textarea>
 				</section>
 			</div>
 		</div>
@@ -217,15 +117,14 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				autoSlide: 25000,
 				// Display controls in the bottom right corner
 				controls: false,
-
+				// Hash routing for slides
+				history: true,
 				// Display a presentation progress bar
 				progress: true,
-
-				// Set default timing of 2 minutes per slide
-				defaultTiming: 3,
+				// Display slide number
+				slideNumber: true,
 
 				dependencies: [
 					// Zoom in and out with Alt+click
@@ -236,6 +135,10 @@
 					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+
+			Reveal.addEventListener('last_slide', function( event ) {
+				Reveal.shuffle()
+			})
 		</script>
 	</body>
 </html>
