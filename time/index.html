@@ -23,30 +23,48 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+						- Why _is_ this value this? it _was_ that...
+						- What _happened_ that made this happen that made that happen?
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
 						_When_ you ask a question, is just as important as the question itself
+
+						Note:
+						Are the lights on? What time does mariams kitchen close today?
 					</textarea>
 				</section>
 				<section data-markdown data-transition="slide-in fade-out" >
 					<textarea data-template>
-						Functional programming
+						## Reasoning about code
+
+						- Functional thinking
+						- Beware: side effects
+						- Being conscious of state and how we use it
+
 					</textarea>
 				</section>
-				<section data-markdown data-transition="fade-in fade-out">
-					<textarea data-template>
-						Functional thinking
-					</textarea>
-				</section>
-				<section data-markdown data-transition="fade-in fade-out">
-					<textarea data-template>
-						Being conscious of state and how we use it
-					</textarea>
-				</section>
-				<section data-markdown>
+				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
 						assert_equal f(x), f(x)
+
+						Note:
+						Uncle bob really exploded my mind with this one. 
+						Raise hands if you know uncle bob? 1000 internet points to each of you
 					</textarea>
 				</section>
-				<section data-markdown data-transition="fade-in fade-out">	
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						- Pure function
+						- Impure function
+						- Side effect
+
+						Note:
+						Raise hands if you know these already
+					</textarea>
+				</section>
+				<section data-markdown data-transition="fade-in fade-out" data-separator-notes="^Note:">	
 					<textarea data-template>
 						Pure function
 
@@ -55,20 +73,14 @@
 							x ** 2
 						end
 						```
-					</textarea>
-				</section>
-				<section data-markdown data-transition="fade-in fade-out">	
-					<textarea data-template>
-						Impure function
 
-						```ruby
-						def f(x)
-						  @some_shared_variable+=1
-						end
-						```
+						Note:
+						Function that depends only on the parameters, no non-local variables
+						Guaranteed same result for same parameters
+						Does not mutate anything outside this scope
 					</textarea>
 				</section>
-				<section data-markdown data-transition="fade-in fade-out">
+				<section data-markdown data-transition="fade-in fade-out" data-separator-notes="^Note:">	
 					<textarea data-template>
 						Impure function
 
@@ -77,28 +89,55 @@
 						  @some_shared_variable+=x
 						end
 						```
+
+						Note:
+						Depends on non-local/external state
+						Has side effects (external / shared mutations)
 					</textarea>
 				</section>
-				<section data-markdown>
+				<section data-markdown data-transition="fade-in fade-out"  data-separator-notes="^Note:">
+					<textarea data-template>
+						Impure function
+
+						```ruby
+						def add_numbers(x, y)
+							ActiveRecord::Migration.drop_table(:users)
+							x + y
+						end
+						```
+
+						Note:
+						Returning the same value doesnt mean a function is safe.
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
 						Impure functions are like boxes of chocolates
+
+						Note:
+						To test these guys effectively, you need to mock things.
+						Extensive mocking will highlight a tight coupling, or excessive side effects.
 					</textarea>
 				</section>
-				<section data-markdown>
+				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
-						Correctness is hard, consistency is easy
+						Side effects are not normal.
+
+						Note:
+						Whats normal? we're conditioned to believe that code should have tons of variables
+						scattered everywhere. That usefulness comes from making classes and instances of things.
+						Conditioned to think that basic data structures are just things to attach to classes and instances of things
+
+						Really like hash and array are enough for me. Everything else is a bonus
 					</textarea>
 				</section>
-				<section data-markdown>
+				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
-						- Pure function
-						- Impure function
-						- Side effect
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						Side effect. Wut
+						Whats so bad about side effects anyway?
+
+						Note:
+						Side effects themselves are not the problem. Its the nature of the operations that have 
+						side effects to	be scattered, widespread, and writing to shared locations without gatekeepers.
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -109,9 +148,18 @@
 						- Writing to database
 					</textarea>
 				</section>
-				<section data-markdown>
+				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
-						We live in a stateful world 🙈
+						So basically everything useful 🙈
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						Correctness is hard, consistency is easy
+
+						Note:
+						Pause here for breathing and asking questions and talking about stuff
+						How much do you know about Object Orientation?
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -128,32 +176,37 @@
 						State over time is hard to track
 					</textarea>
 				</section>
-				<section>
-					<p>How much do you care about tracking the states of things over time?</p>
-					<p class="fragment" data-autoslide="4000"> Git? </p>
-					<p class="fragment" data-autoslide="1000"> Sumo? </p>
-					<p class="fragment" data-autoslide="1000"> Grafana? </p>
-					<p class="fragment"> NewRelic? </p>
-				</section>
-				<!-- <section data-markdown>
-					<textarea data-template>
-						Version control
-
-						- Why do we not care about version control at a database level?
-						- The history of changes of persistent state over time
-					</textarea>
-				</section> -->
 				<section data-markdown>
 					<textarea data-template>
-							| id        | Status |  Created at           | Updated at  |
-							| ------------- |-------------| -----| ----|
-							| 1 | initial | Today 10:01 | Today 10:01 |
-							| 2 | striking | Yesterday 10:01 | Today 10:01 |
+						## Reasoning about data
+
+						- Intermediate states
+						- Intermediate mutations
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template data-separator-notes="^Note:">
+						| id        | Status |  Created at           | Updated at  |
+						| ------------- |-------------| -----| ----|
+						| 1 | initial | Today 10:01 | Today 10:01 |
+						| 2 | striking | Yesterday 10:01 | Today 10:01 |
+
+						Note:
+						Where do we find this knowledge? Sumo. Metrics. What happens when we check the database? When we try to reproduce problems?
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 						### created -> ( 1...n ) -> update
+						---
+						I'll get you coffee from the tap if you have an answer for this.
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						has_paper_trail?
+						---
+						You owe me coffee from the tap if this was your answer
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -161,19 +214,20 @@
 						Some words I dont understand
 
 						- Event sourcing
-						- CQRS						
-						- Datomic 					# Sean
-						- Append only databases     # Sean
+						- CQRS
+						- Datomic
+						- Append only databases
 					</textarea>
 				</section>
-				<section data-markdown>
+				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
-						Store the states or store the mutations
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						has_paper_trail?
+						Store all intermediate states or store the mutations
+
+						Note:
+						This effectively gives you time travel for any table.
+						Simultaneous time travel on any table, means time travel your database
+
+						This is how recompute balance can make it to the correct state, temporarily
 					</textarea>
 				</section>
 				<section data-markdown data-state="last_slide">
@@ -214,7 +268,7 @@
 			});
 
 			Reveal.addEventListener('last_slide', function( event ) {
-				// Reveal.shuffle()
+				Reveal.shuffle()
 			})
 		</script>
 	</body>
