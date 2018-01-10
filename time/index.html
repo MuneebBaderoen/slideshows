@@ -98,12 +98,89 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						Side effects. Wut
+						Side effect. Wut
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						- Printing to screen (Hello world?)
+						- Reassigning a variable
+						- Making a network request
+						- Writing to database
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						We live in a stateful world 🙈
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						Okay, so we've been writing stateful code our entire lives
+					</textarea>
+				</section>
+				<section>
+					<p>We should be pretty good at effects of the side variety</p>
+					<img class="stretch" src="./assets/giphy.gif" alt="LMGTFY"></img>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						State over time is hard to track
+					</textarea>
+				</section>
+				<section>
+					<p>How much do you care about tracking the states of things over time?</p>
+					<p class="fragment" data-autoslide="4000"> Git? </p>
+					<p class="fragment" data-autoslide="1000"> Sumo? </p>
+					<p class="fragment" data-autoslide="1000"> Grafana? </p>
+					<p class="fragment"> NewRelic? </p>
+				</section>
+				<!-- <section data-markdown>
+					<textarea data-template>
+						Version control
+
+						- Why do we not care about version control at a database level?
+						- The history of changes of persistent state over time
+					</textarea>
+				</section> -->
+				<section data-markdown>
+					<textarea data-template>
+							| id        | Status |  Created at           | Updated at  |
+							| ------------- |-------------| -----| ----|
+							| 1 | initial | Today 10:01 | Today 10:01 |
+							| 2 | striking | Yesterday 10:01 | Today 10:01 |
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### created -> ( 1...n ) -> update
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						Some words I dont understand
+
+						- Event sourcing
+						- CQRS						
+						- Datomic 					# Sean
+						- Append only databases     # Sean
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						Store the states or store the mutations
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						has_paper_trail?
 					</textarea>
 				</section>
 				<section data-markdown data-state="last_slide">
 					<textarea data-template>
-						Last slide	
+						What is the index of the title slide?
+
+						I'll get you coffee from the tap if you get it right.
 					</textarea>
 				</section>
 			</div>
@@ -137,7 +214,7 @@
 			});
 
 			Reveal.addEventListener('last_slide', function( event ) {
-				Reveal.shuffle()
+				// Reveal.shuffle()
 			})
 		</script>
 	</body>
