@@ -1,0 +1,194 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Copyright (C) 2012 David Peterson -->
+<svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="396.851pt" height="362.836pt" viewBox="0 0 396.851 362.836">
+ <defs>
+  <marker id="DefaultArrow2" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_STRAIGHT (-2) -->
+   <g transform="scale(0.0092592592)">
+    <!-- 1/108 -->
+    <path d="M -9 54 L -9 -54 L 117 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow3" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow4" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ROUNDED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -9,0 L -9,-45 C -9,-51.708 2.808,-56.580 9,-54 L 117,-9 C 120.916,-7.369 126.000,-4.242 126,0 C 126,4.242 120.916,7.369 117,9 L 9,54 C 2.808,56.580 -9,51.708 -9,45 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow5" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_SPOT -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -54, 0 C -54,29.807 -29.807,54 0,54 C 29.807,54 54,29.807 54,0 C 54,-29.807 29.807,-54 0,-54 C -29.807,-54 -54,-29.807 -54,0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow6" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_DIAMOND -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -63,0 L 0,63 L 63,0 L 0,-63 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow7" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_FEATHER -->
+   <g transform="scale(0.0092592592)">
+    <path d="M 18,-54 L 108,-54 L 63,0 L 108,54 L 18, 54 L -36,0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow8" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_FEATHER2 -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -36,0 L 18,-54 L 54,-54 L 18,-18 L 27,-18 L 63,-54 L 99,-54 L 63,-18 L 72,-18 L 108,-54 L 144,-54 L 90,0 L 144,54 L 108,54 L 72,18 L 63,18 L 99,54 L 63,54 L 27,18 L 18,18 L 54,54 L 18,54 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow9" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_HOLLOWDIAMOND -->
+   <g transform="scale(0.0092592592)">
+    <path d="M 0,45 L -45,0 L 0, -45 L 45, 0 z M 0, 63 L-63, 0 L 0, -63 L 63, 0 z"/>
+   </g>
+  </marker>
+  <filter id="StainedFilter">
+   <feBlend mode="multiply" in2="BackgroundImage" in="SourceGraphic" result="blend"/>
+   <feComposite in="blend" in2="SourceAlpha" operator="in" result="comp"/>
+  </filter>
+  <filter id="BleachFilter">
+   <feBlend mode="screen" in2="BackgroundImage" in="SourceGraphic" result="blend"/>
+   <feComposite in="blend" in2="SourceAlpha" operator="in" result="comp"/>
+  </filter>
+  <filter id="InvertTransparencyBitmapFilter">
+   <feComponentTransfer>
+    <feFuncR type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+    <feFuncG type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+    <feFuncB type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+   </feComponentTransfer>
+   <feComponentTransfer>
+    <feFuncR type="linear" slope="-1" intercept="1"/>
+    <feFuncG type="linear" slope="-1" intercept="1"/>
+    <feFuncB type="linear" slope="-1" intercept="1"/>
+    <feFuncA type="linear" slope="1" intercept="0"/>
+   </feComponentTransfer>
+   <feComponentTransfer>
+    <feFuncR type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+    <feFuncG type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+    <feFuncB type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+   </feComponentTransfer>
+  </filter>
+  <marker id="DefaultArrowScaled" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_1" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_2" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_3" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_4" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_5" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_6" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_7" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_8" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_9" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrowScaled_10" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="13" markerHeight="13" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+ </defs>
+ <g id="Document" fill="none" stroke="black" font-family="Times New Roman" font-size="16" transform="scale(1 -1)">
+  <g id="Spread" transform="translate(0 -362.836)">
+   <g id="Layer 1">
+    <path d="M 282.192,159.699 C 275.407,180.987 263.072,187.154 254.128,205.657" fill="none" marker-end="url(#DefaultArrowScaled)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 194.252,159.699 C 200.955,180.987 213.141,187.154 221.976,205.657" fill="none" marker-end="url(#DefaultArrowScaled_1)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 238.56,196.911 C 256.838,196.911 271.673,194.586 271.673,191.721 C 271.673,188.856 256.838,186.531 238.56,186.531 C 220.282,186.531 205.447,188.856 205.447,191.721 C 205.447,194.586 220.282,196.911 238.56,196.911 Z" fill="#ffffff" stroke-width="0.5" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 181.239,159.699 C 173.083,180.987 158.255,187.154 147.504,205.657" fill="none" marker-end="url(#DefaultArrowScaled_2)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 87.705,159.699 C 95.861,180.987 110.689,187.154 121.44,205.657" fill="none" marker-end="url(#DefaultArrowScaled_3)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 226.65,245.187 C 211.622,271.937 184.298,279.687 164.488,302.937" fill="none" marker-end="url(#DefaultArrowScaled_4)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 136.974,246.522 L 136.974,301.354" fill="none" marker-end="url(#DefaultArrowScaled_5)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 336.714,288.612 C 430.974,172.272 366.474,67.272 293.874,25.197" fill="none" marker-end="url(#DefaultArrowScaled_6)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 165.474,332.772 C 193.974,343.272 245.724,344.022 293.724,317.772" fill="none" marker-end="url(#DefaultArrowScaled_7)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 60.72,245.187 C 73.046,271.937 95.458,279.687 111.707,302.937" fill="none" marker-end="url(#DefaultArrowScaled_8)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 294.494,305.685 L 294.494,266.26 C 294.494,261.574 298.298,257.77 302.984,257.77 L 365.489,257.77 C 370.175,257.77 373.979,261.574 373.979,266.26 L 373.979,305.685 C 373.979,310.371 370.175,314.175 365.489,314.175 L 302.984,314.175 C 298.298,314.175 294.494,310.371 294.494,305.685 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 198.309,254.698 L 198.309,220.203 C 198.309,216.103 201.637,212.775 205.737,212.775 L 265.982,212.775 C 270.082,212.775 273.41,216.103 273.41,220.203 L 273.41,254.698 C 273.41,258.798 270.082,262.126 265.982,262.126 L 205.737,262.126 C 201.637,262.126 198.309,258.798 198.309,254.698 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 99.527,254.698 L 99.527,220.203 C 99.527,216.103 102.855,212.775 106.955,212.775 L 167.2,212.775 C 171.3,212.775 174.628,216.103 174.628,220.203 L 174.628,254.698 C 174.628,258.798 171.3,262.126 167.2,262.126 L 106.955,262.126 C 102.855,262.126 99.527,258.798 99.527,254.698 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 14.619,254.698 L 14.619,220.203 C 14.619,216.103 17.947,212.775 22.047,212.775 L 82.292,212.775 C 86.392,212.775 89.72,216.103 89.72,220.203 L 89.72,254.698 C 89.72,258.798 86.392,262.126 82.292,262.126 L 22.047,262.126 C 17.947,262.126 14.619,258.798 14.619,254.698 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 99.526,351.448 L 99.526,316.953 C 99.526,312.853 102.854,309.525 106.954,309.525 L 167.199,309.525 C 171.299,309.525 174.627,312.853 174.627,316.953 L 174.627,351.448 C 174.627,355.548 171.299,358.876 167.199,358.876 L 106.954,358.876 C 102.854,358.876 99.526,355.548 99.526,351.448 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 23.151,157.966 L 23.151,117.075 C 23.151,112.215 27.096,108.27 31.956,108.27 L 118.597,108.27 C 123.457,108.27 127.402,112.215 127.402,117.075 L 127.402,157.966 C 127.402,162.826 123.457,166.771 118.597,166.771 L 31.956,166.771 C 27.096,166.771 23.151,162.826 23.151,157.966 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(74.988 149.615) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-44.652" y="0">Putting conditional logic</tspan><tspan x="-32.606" y="9.495">around new code</tspan><tspan x="-41.819" y="18.99">reduces the chance of</tspan><tspan x="-42.289" y="28.485">breaking existing code</tspan></text>
+    <path d="M 146.157,157.928 L 146.157,117.113 C 146.157,112.262 150.095,108.324 154.946,108.324 L 222.407,108.324 C 227.258,108.324 231.196,112.262 231.196,117.113 L 231.196,157.928 C 231.196,162.779 227.258,166.717 222.407,166.717 L 154.946,166.717 C 150.095,166.717 146.157,162.779 146.157,157.928 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(187.329 149.615) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-30.71" y="0">Developers take</tspan><tspan x="-30.939" y="9.495">care to minimise </tspan><tspan x="-20.793" y="18.99">changes to </tspan><tspan x="-24.806" y="28.485">existing code</tspan></text>
+    <path d="M 249.951,157.966 L 249.951,117.075 C 249.951,112.215 253.896,108.27 258.756,108.27 L 345.397,108.27 C 350.257,108.27 354.202,112.215 354.202,117.075 L 354.202,157.966 C 354.202,162.826 350.257,166.771 345.397,166.771 L 258.756,166.771 C 253.896,166.771 249.951,162.826 249.951,157.966 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(301.878 149.563) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-39.846" y="0">W</tspan><tspan x="-31.976" y="0">orking on a copy of</tspan><tspan x="-34.726" y="9.495">some code means</tspan><tspan x="-32.37" y="18.99">you don’t have to</tspan><tspan x="-35.914" y="28.485">change the original</tspan></text>
+    <text xml:space="preserve" transform="translate(52.061 244.745) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-21.263" y="0">Conditional</tspan><tspan x="-28.109" y="9.495">logic increases</tspan><tspan x="-20.075" y="18.99">complexity</tspan></text>
+    <text xml:space="preserve" transform="translate(137.112 244.746) scale(1 -1)" fill="#000000" font-family="Arial" stroke-width="0.25" stroke="none" font-size="8.5" stroke-miterlimit="79.8403193612775"><tspan x="-21.263" y="0">Conditional</tspan><tspan x="-23.386" y="9.495">logic is used</tspan><tspan x="-14.407" y="18.99">liberally</tspan></text>
+    <text xml:space="preserve" transform="translate(236.058 239.949) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-28.583" y="0">The code is full</tspan><tspan x="-25.044" y="9.495">of duplication</tspan></text>
+    <text xml:space="preserve" transform="translate(137.14 336.75) scale(1 -1)" fill="#000000" font-family="Arial" stroke-width="0.25" stroke="none" font-size="8.5" stroke-miterlimit="79.8403193612775"><tspan x="-21.969" y="0">The code is</tspan><tspan x="-15.825" y="9.495">complex</tspan></text>
+    <text xml:space="preserve" transform="translate(333.813 298.015) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-25.669" y="0">It is dif</tspan><tspan x="-1.259" y="0">ficult to</tspan><tspan x="-28.355" y="9.495">understand the</tspan><tspan x="-28.579" y="18.99">ramifications of</tspan><tspan x="-24.1" y="28.485">any changes</tspan></text>
+    <path d="M 115.807,290.466 C 131.842,290.466 144.857,288.141 144.857,285.276 C 144.857,282.411 131.842,280.086 115.807,280.086 C 99.772,280.086 86.757,282.411 86.757,285.276 C 86.757,288.141 99.772,290.466 115.807,290.466 Z" fill="#ffffff" stroke-width="0.5" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 133.905,196.911 C 151.171,196.911 165.184,194.586 165.184,191.721 C 165.184,188.856 151.171,186.531 133.905,186.531 C 116.639,186.531 102.626,188.856 102.626,191.721 C 102.626,194.586 116.639,196.911 133.905,196.911 Z" fill="#ffffff" stroke-width="0.5" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 240.939,55.059 C 232.783,76.347 217.955,82.514 207.204,101.017" fill="none" marker-end="url(#DefaultArrowScaled_9)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 139.905,55.059 C 148.061,76.347 162.889,82.514 173.64,101.017" fill="none" marker-end="url(#DefaultArrowScaled_10)" stroke-width="0.5" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 190.23,86.601 C 214.867,86.601 234.863,84.276 234.863,81.411 C 234.863,78.546 214.867,76.221 190.23,76.221 C 165.593,76.221 145.597,78.546 145.597,81.411 C 145.597,84.276 165.593,86.601 190.23,86.601 Z" fill="#ffffff" stroke-width="0.5" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 108.174,53.413 L 108.174,18.918 C 108.174,14.818 111.502,11.49 115.602,11.49 L 175.847,11.49 C 179.947,11.49 183.275,14.818 183.275,18.918 L 183.275,53.413 C 183.275,57.513 179.947,60.841 175.847,60.841 L 115.602,60.841 C 111.502,60.841 108.174,57.513 108.174,53.413 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 201.777,53.033 L 201.777,12.218 C 201.777,7.367 205.715,3.429 210.566,3.429 L 278.027,3.429 C 282.878,3.429 286.816,7.367 286.816,12.218 L 286.816,53.033 C 286.816,57.884 282.878,61.822 278.027,61.822 L 210.566,61.822 C 205.715,61.822 201.777,57.884 201.777,53.033 Z" fill="#f7f7f7" stroke-width="0.5" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(145.606 43.512) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-27.404" y="0">Developers do</tspan><tspan x="-20.791" y="9.495">not want to</tspan><tspan x="-27.879" y="18.99">introduce bugs</tspan></text>
+    <text xml:space="preserve" transform="translate(244.298 43.876) scale(1 -1)" fill="#000000" font-family="Arial" stroke-width="0.25" stroke="none" font-size="8.5" stroke-miterlimit="79.8403193612775"><tspan x="-21.495" y="0">It is easy to</tspan><tspan x="-29.299" y="9.495">introduce a bug</tspan><tspan x="-28.59" y="18.99">when changing</tspan><tspan x="-9.215" y="28.485">code</tspan></text>
+    <text xml:space="preserve" transform="translate(327.07 222.706) scale(1 -1)" font-size="10.789" font-weight="bold" font-family="Arial" stroke="none" stroke-width="0.317" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-22.181" y="0">VICIOUS</tspan><tspan x="-20.078" y="12.052">CIRCLE</tspan></text>
+    <text xml:space="preserve" transform="matrix(0.970871 0.239609 0.239609 -0.970871 84.505 35.366)" font-size="10.737" font-weight="bold" font-family="Arial" stroke="none" stroke-width="0.314" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-17.495" y="0">ST</tspan><tspan x="-4.571" y="0">ART</tspan><tspan x="-14.915" y="11.994">HERE</tspan></text>
+    <text xml:space="preserve" transform="translate(188.724 78.873) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-8.972" y="0">AND</tspan></text>
+    <text xml:space="preserve" transform="translate(115.224 64.623) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-6.849" y="0">IF</tspan><tspan x="-0.236" y="0">...</tspan></text>
+    <text xml:space="preserve" transform="translate(153.474 98.373) scale(1 -1)" font-size="8.5" font-family="Arial" stroke="none" stroke-width="0.25" fill="#000000" stroke-miterlimit="79.8403193612775"><tspan x="-15.111" y="0">THEN...</tspan></text>
+   </g>
+  </g>
+ </g>
+</svg>
