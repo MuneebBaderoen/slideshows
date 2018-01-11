@@ -50,7 +50,7 @@
 						assert_equal f(x), f(x)
 
 						Note:
-						Uncle bob really exploded my mind with this one. 
+						Uncle bob really exploded my mind with this one.
 						Raise hands if you know uncle bob? 1000 internet points to each of you
 					</textarea>
 				</section>
@@ -64,7 +64,7 @@
 						Raise hands if you know these already
 					</textarea>
 				</section>
-				<section data-markdown data-transition="fade-in fade-out" data-separator-notes="^Note:">	
+				<section data-markdown data-transition="fade-in fade-out" data-separator-notes="^Note:">
 					<textarea data-template>
 						Pure function
 
@@ -80,7 +80,7 @@
 						Does not mutate anything outside this scope
 					</textarea>
 				</section>
-				<section data-markdown data-transition="fade-in fade-out" data-separator-notes="^Note:">	
+				<section data-markdown data-transition="fade-in fade-out" data-separator-notes="^Note:">
 					<textarea data-template>
 						Impure function
 
@@ -116,7 +116,39 @@
 
 						Note:
 						To test these guys effectively, you need to mock things.
-						Extensive mocking will highlight a tight coupling, or excessive side effects.
+						Extensive mocking will highlight a tight coupling between components,
+						or more explicitly excessive side effects.
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						## Side effects
+
+						- Difficult to test (fixtures?)
+						- Difficult to reproduce (fixtures?)
+						- Difficult to track (sumo?)
+						- Difficult to reason about (wat?)
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						Side effects make your life difficult
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						- Printing to screen (Hello world?)
+						- Reassigning a variable
+						- Making a network request
+						- Writing to database
+
+						Note:
+						Basically, mutations of things, in place
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						So basically everything useful 🙈
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -128,7 +160,10 @@
 						scattered everywhere. That usefulness comes from making classes and instances of things.
 						Conditioned to think that basic data structures are just things to attach to classes and instances of things
 
-						Really like hash and array are enough for me. Everything else is a bonus
+						I'll have a separate rant another day about why Object Orientation itself is not a bad pattern,
+						but people teach it and understand it halfway without teaching/learning the consequences of it
+
+						It's taught as if it is the only way to build things, and realistically...it just isnt.
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -136,21 +171,8 @@
 						Whats so bad about side effects anyway?
 
 						Note:
-						Side effects themselves are not the problem. Its the nature of the operations that have 
+						Side effects themselves are not the problem. Its the nature of the operations that have
 						side effects to	be scattered, widespread, and writing to shared locations without gatekeepers.
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						- Printing to screen (Hello world?)
-						- Reassigning a variable
-						- Making a network request
-						- Writing to database
-					</textarea>
-				</section>
-				<section data-markdown data-separator-notes="^Note:">
-					<textarea data-template>
-						So basically everything useful 🙈
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -162,6 +184,9 @@
 						How much do you know about Object Orientation?
 					</textarea>
 				</section>
+				<section data-separator-notes="^Note:">
+					<img class="stretch" src="./assets/nicholas_cage.gif" alt="LMGTFY"></img>
+				</section>
 				<section data-markdown>
 					<textarea data-template>
 						Okay, so we've been writing stateful code our entire lives
@@ -169,7 +194,7 @@
 				</section>
 				<section>
 					<p>We should be pretty good at effects of the side variety</p>
-					<img class="stretch" src="./assets/giphy.gif" alt="LMGTFY"></img>
+					<img class="stretch" src="./assets/jenga.gif" alt="LMGTFY"></img>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
@@ -202,11 +227,17 @@
 						I'll get you coffee from the tap if you have an answer for this.
 					</textarea>
 				</section>
-				<section data-markdown>
+				<section data-markdown  data-separator-notes="^Note:">
 					<textarea data-template>
 						has_paper_trail?
 						---
-						You owe me coffee from the tap if this was your answer
+						You have to get me coffee from the tap if this was your answer
+
+						Note:
+						The versions table exists, and is written to during development. Production
+						table is blank. So we have this functionality but we arent using it
+
+						Show the gem website, the version controller, and the SQL queries
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -221,6 +252,38 @@
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
+						Strategy I've seen used before successfully (MSSQL)
+
+						| id        | Status |  Effective from           | Effective to  | User
+						| ------------- |-------------| -----| ----|
+						| 1 | initial | Today 10:01 | 9999-12-31 23:59:59.999 | muneeb
+						| 2 | initial | Yesterday 10:01 | 2018-01-13 10:02:29.300 | muneeb
+						| 3 | striking | 2018-01-13 10:02:29.301 | 9999-12-31 23:59:59.999 | muneeb
+
+						Note:
+						Query the db with date comparisons for time travel, Query with equality for current state
+
+						Pros:
+						- Time travel through database
+						- Snapshots without creating snapshot
+
+						Cons:
+						- Tables grow significantly faster (we have smart people to help with that)
+						- R/W overheads to maintain the ability to time travel
+						- Can make basically all screens time travel
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template data-separator-notes="^Note:">
+						| id        | Status |  Created at           | Updated at  |
+						| ------------- |-------------| -----| ----|
+						| 1 | initial | Today 10:01 | Today 10:01 |
+						| 2 | striking | Yesterday 10:01 | Today 10:01 |
+
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
 						Store all intermediate states or store the mutations
 
 						Note:
@@ -230,12 +293,15 @@
 						This is how recompute balance can make it to the correct state, temporarily
 					</textarea>
 				</section>
-				<section data-markdown data-state="last_slide">
+				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
-						What is the index of the title slide?
-
-						I'll get you coffee from the tap if you get it right.
+						Tracking state changes over time
 					</textarea>
+				</section>
+				<section data-state="last_slide">
+					<p>What is the index of the title slide?</p>
+					<p>I'll get you coffee from the tap if you get it right.</p>
+					<img class="stretch" src="./assets/over_9000.gif" alt="LMGTFY"></img>
 				</section>
 			</div>
 		</div>
@@ -268,6 +334,8 @@
 			});
 
 			Reveal.addEventListener('last_slide', function( event ) {
+				debugger
+				Reveal.remove()
 				Reveal.shuffle()
 			})
 		</script>
