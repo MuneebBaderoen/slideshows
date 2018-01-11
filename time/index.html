@@ -32,7 +32,7 @@
 						_When_ you ask a question, is just as important as the question itself
 
 						Note:
-						Are the lights on? What time does mariams kitchen close today?
+						Am I sitting? What time does mariams kitchen close today?
 					</textarea>
 				</section>
 				<section data-markdown data-transition="slide-in fade-out" >
@@ -124,10 +124,13 @@
 					<textarea data-template>
 						## Side effects
 
-						- Difficult to test (fixtures?)
-						- Difficult to reproduce (fixtures?)
-						- Difficult to track (sumo?)
-						- Difficult to reason about (wat?)
+						- Difficult to test
+						- Difficult to reproduce
+						- Difficult to track
+						- Difficult to reason
+
+						Note:
+						fixtures, mocks, click testing on the UI, Call a PO
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -171,6 +174,8 @@
 						Whats so bad about side effects anyway?
 
 						Note:
+						Don't worry, Im not saying we should drop all our databases because side effects are bad.
+
 						Side effects themselves are not the problem. Its the nature of the operations that have
 						side effects to	be scattered, widespread, and writing to shared locations without gatekeepers.
 					</textarea>
@@ -186,6 +191,30 @@
 				</section>
 				<section data-separator-notes="^Note:">
 					<img class="stretch" src="./assets/nicholas_cage.gif" alt="LMGTFY"></img>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						##Recap
+
+						- Side effects are difficult to:
+							- predict, track, test and reproduce
+						- Side effects are massively useful
+						- Proliferous side effects will keep you awake at night
+
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						## Recap
+
+						- Pure functions will let you sleep at night
+						- Isolating side effects is good
+						- Correctness is hard, consistency is easy
+
+						Note:
+						Consistency is easy, you want as much of the code you write to be 100% reliable
+						Correctness is hard, and matures over time
+					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
@@ -207,10 +236,13 @@
 
 						- Intermediate states
 						- Intermediate mutations
+						- Time travel
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template data-separator-notes="^Note:">
+						## Intermediate states
+
 						| id        | Status |  Created at           | Updated at  |
 						| ------------- |-------------| -----| ----|
 						| 1 | initial | Today 10:01 | Today 10:01 |
@@ -238,6 +270,17 @@
 						table is blank. So we have this functionality but we arent using it
 
 						Show the gem website, the version controller, and the SQL queries
+
+						The problem is that it saves a serialized ruby hash, which is difficult to query and report on.
+						Its not nearly as useful as database integrity
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						# Intermediate mutations
+
+						- Balances as the aggregation of transactions
+						- Total counters as the sum of increments
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -245,7 +288,7 @@
 						Some words I dont understand
 
 						- Event sourcing
-						- CQRS
+						- CQRS (Command Query Responsibility Segregation)
 						- Datomic
 						- Append only databases
 					</textarea>
@@ -266,11 +309,11 @@
 						Pros:
 						- Time travel through database
 						- Snapshots without creating snapshot
+						- Can make basically all screens time travel
 
 						Cons:
 						- Tables grow significantly faster (we have smart people to help with that)
 						- R/W overheads to maintain the ability to time travel
-						- Can make basically all screens time travel
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -284,18 +327,17 @@
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
+						# Recap
+
 						Store all intermediate states or store the mutations
 
 						Note:
+						If you want to sleep at night
+
 						This effectively gives you time travel for any table.
 						Simultaneous time travel on any table, means time travel your database
 
 						This is how recompute balance can make it to the correct state, temporarily
-					</textarea>
-				</section>
-				<section data-markdown data-separator-notes="^Note:">
-					<textarea data-template>
-						Tracking state changes over time
 					</textarea>
 				</section>
 				<section data-state="last_slide">
@@ -333,10 +375,13 @@
 				]
 			});
 
+			window.hasShuffled = false;
+
 			Reveal.addEventListener('last_slide', function( event ) {
-				debugger
-				Reveal.remove()
-				Reveal.shuffle()
+				if(!window.hasShuffled){
+					Reveal.shuffle()
+					window.hasShuffled = true
+				}
 			})
 		</script>
 	</body>
