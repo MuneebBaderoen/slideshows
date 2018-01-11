@@ -35,13 +35,19 @@
 						Am I sitting? What time does mariams kitchen close today?
 					</textarea>
 				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						- Reasoning about code
+						- Reasoning about data
+					</textarea>
+				</section>
 				<section data-markdown data-transition="slide-in fade-out" >
 					<textarea data-template>
 						## Reasoning about code
 
 						- Functional thinking
 						- Beware: side effects
-						- Being conscious of state and how we use it
+						- Being conscious of state(variables) and how we use it
 
 					</textarea>
 				</section>
@@ -77,7 +83,7 @@
 						Note:
 						Function that depends only on the parameters, no non-local variables
 						Guaranteed same result for same parameters
-						Does not mutate anything outside this scope
+						Does not mutate anything outside this function scope
 					</textarea>
 				</section>
 				<section data-markdown data-transition="fade-in fade-out" data-separator-notes="^Note:">
@@ -86,7 +92,7 @@
 
 						```ruby
 						def f(x)
-						  @some_shared_variable+=x
+						  @some_shared_state+=x
 						end
 						```
 
@@ -107,17 +113,13 @@
 						```
 
 						Note:
-						Returning the same value doesnt mean a function is safe.
+						Returning the same value doesnt mean a function is pure, or safe.
+						Explain void functions to me
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
 						Impure functions are like boxes of chocolates
-
-						Note:
-						To test these guys effectively, you need to mock things.
-						Extensive mocking will highlight a tight coupling between components,
-						or more explicitly excessive side effects.
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -127,10 +129,15 @@
 						- Difficult to test
 						- Difficult to reproduce
 						- Difficult to track
-						- Difficult to reason
+						- Difficult to reason about
+						- Order matters
 
 						Note:
-						fixtures, mocks, click testing on the UI, Call a PO
+						To test these guys effectively, you need to mock things.
+						Extensive mocking will highlight a tight coupling between components,
+						or more explicitly excessive side effects.
+
+						opening twice without closing, closing before opening?
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -163,7 +170,7 @@
 						scattered everywhere. That usefulness comes from making classes and instances of things.
 						Conditioned to think that basic data structures are just things to attach to classes and instances of things
 
-						I'll have a separate rant another day about why Object Orientation itself is not a bad pattern,
+						I'll have a separate rant, on another day, about why Object Orientation itself is not a bad pattern,
 						but people teach it and understand it halfway without teaching/learning the consequences of it
 
 						It's taught as if it is the only way to build things, and realistically...it just isnt.
@@ -171,13 +178,15 @@
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
-						Whats so bad about side effects anyway?
+						How do I build useful things without side effects?
 
 						Note:
 						Don't worry, Im not saying we should drop all our databases because side effects are bad.
 
 						Side effects themselves are not the problem. Its the nature of the operations that have
 						side effects to	be scattered, widespread, and writing to shared locations without gatekeepers.
+
+						Concurrency becomes harder, we start needing mutexes nad semaphores
 					</textarea>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -185,11 +194,14 @@
 						Correctness is hard, consistency is easy
 
 						Note:
+						If the majority of your code is predictable, it becomes easier to reason about the impact of side effects on application state
+
 						Pause here for breathing and asking questions and talking about stuff
 						How much do you know about Object Orientation?
 					</textarea>
 				</section>
 				<section data-separator-notes="^Note:">
+					<p>Correctness is hard, consistency is easy</p>
 					<img class="stretch" src="./assets/nicholas_cage.gif" alt="LMGTFY"></img>
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
@@ -197,7 +209,8 @@
 						##Recap
 
 						- Side effects are difficult to:
-							- predict, track, test and reproduce
+							- predict, track, test, reproduce
+							- reason about
 						- Side effects are massively useful
 						- Proliferous side effects will keep you awake at night
 
@@ -254,7 +267,7 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### created -> ( 1...n ) -> update
+						### created -> ( 1...n ) -> updated
 						---
 						I'll get you coffee from the tap if you have an answer for this.
 					</textarea>
@@ -295,7 +308,7 @@
 				</section>
 				<section data-markdown data-separator-notes="^Note:">
 					<textarea data-template>
-						Strategy I've seen used before successfully (MSSQL)
+						Strategy I've seen used before successfully (MSSQL, WCF)
 
 						| id        | Status |  Effective from           | Effective to  | User
 						| ------------- |-------------| -----| ----|
@@ -337,7 +350,15 @@
 						This effectively gives you time travel for any table.
 						Simultaneous time travel on any table, means time travel your database
 
-						This is how recompute balance can make it to the correct state, temporarily
+						Without this knowledge, your system is running without you knowing what its doing.
+					</textarea>
+				</section>
+				<section data-markdown data-separator-notes="^Note:">
+					<textarea data-template>
+						The importance of the ability to snapshot, with millisecond precision, the state of the jumo environment is multiplied 10 fold in a distributed microservice architecture
+
+						Note:
+						Think about this early, lets talk alternatives. Intermediate representations are important.
 					</textarea>
 				</section>
 				<section data-state="last_slide">
