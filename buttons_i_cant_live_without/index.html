@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Buttons</title>
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Introduction -->
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						## Buttons I can't live without
+
+						Note: Make sure keycasting and recording is up. Open test buffers in sublime. Open an application that needs closing. Hide bookmarks bar. Start a stopwatch. Make cursor huge. Kill the lightning tmux session. Detach from tmux. Remove remotes from console. ----------------------------------------------- Dont try to remember the actual buttons. I'm gonna upload this talk to github, and you can always chat to me, I know these off by heart.
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" >
+					<textarea data-template>
+						### Clicking the save icon
+						Note: When last? We know thats not efficient. So we already know that buttons are powerful. Saving, opening, quit. Thats 3. What are we doing with the rest of the buttons?
+					</textarea>
+				</section>
+
+				<section data-transition="slide-in fade-out" >
+					<h3>Fitts' Law</h3>
+					<img class="stretch" src="./assets/fitts_law.png" alt="LMGTFY"></img>
+					<aside class="notes">For anybody who has studied HCI, shoutout to Gary Marsden for teaching me. (explain the law). We want the things we do frequently to be close, we're okay with less frequent actions being far away. If you want something to be easier to do, bring it closer, or make the target bigger</aside>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>The power of buttons</h3>
+						<img class="stretch" src="./assets/tekken_special.gif" alt="LMGTFY"></img>
+						<aside class="notes">Fighting games taught me the power of buttons. You stand there like punch punch crouch punch, and the other person throws stuff like this.
+						</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						### Quick mafs
+
+						(keys \* modifier_combinations)
+
+						(100 \* 16)
+
+						Note: Controllers have 14 buttons and 2 analogs, 100 key layout, 4 modifiers (16 combinations).
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						### Thats a lot of buttons
+						<aside class="notes">Thats a lot of buttons</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Programming is a craft</h3>
+						<aside class="notes">Every craft has its tools. Think of yourself as a craftsperson, and what tools you use. Which tools are useful? How well do you know your tools? Im going to distinguish tool from software, im defining a tool as an action, ie. Swapping two lines</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Swapping lines</h3>
+						<aside class="notes">One, Three, Two, Four. Cut and paste is not enough. Swapping lines to me is not 4 actions, it has to be one. Any more than one is frustrating.</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Beginner level - Learn</h3>
+						<p>(OSX)</p>
+						<aside class="notes">Get to know your tools. Learn as much actions as you can. Learn as many shortcuts as you can. Learn the defaults. Learn the keybindings for the things you need a mouse or a menu to achieve. Read the menus, the shortcuts are there.
+							(cmd-space, cmd-shift-n, Expose down then up (with ctrl-down and up, Expose space preview, cmd-`, minimize and restore from minimized, quit from cmd-tab)
+							</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+						<textarea data-template>
+							<h3>Beginner level - Learn</h3>
+							<p>(fuzzy iTerm, Sublime)</p>
+							<aside class="notes">
+								(iterm - tabs, splits, switching tabs with Cmd-Shift-[, fuzzy finding with ctrl-r, ctrl-w)
+								(Sublime Cmd-D, Cmd-Shift-L, sort lines, snippets)
+								</aside>
+						</textarea>
+					</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Add tools where necessary</h3>
+						<p>(Spectacle)</p>
+						<aside class="notes">Once you've gone on this journey you'll recognize the shortcomings of the built ins. And youll gain a whole bunch of power tools. Mac OS maximizing is broken. Snap left, snap right? </aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Intermediate level - Create</h3>
+						<aside class="notes">Sometimes our tools are close but not quite. Create keybindings that dont exist, for actions that do exist. Bring your frequent actions closer.</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Dont be afraid to override defaults</h3>
+						<p>(tmux, fish-shell)</p>
+						<aside class="notes">Operations where the defaults are not memorable. I ran iTerm/zsh for a long time. Maybe about a year or so (tmux panes, windows, sessions, zooming) (fish completion for built in commands, aliases, abbreviations - completion benefits)</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Advanced level - Optimize</h3>
+						<aside class="notes">Add behaviours, write plugins, extensions (add-gog-planets, deploy-to-planet), slack bots</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h4>Opinionated. Doesnt exist out of the (tool)box</h4>
+						<aside class="notes">Once you make it here you'll realize everything about your setup is opinionated. You know exactly what you want. Doesnt exist out of the (tool)box. You steal (copy) things from other peoples boxes, and you take your toolbox everywhere. Choose your defaults (you've probs written everything you need at the moment, or you plan to)
+							</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<img style="max-width: 600px;" src="./assets/refreshing_horse.gif" alt="LMGTFY"></img>
+						<aside class="notes">Quick refreshing gif</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Beginner</h3>
+						<ul>
+							<li>Learn the defaults</li>
+							<li>Use the buttons</li>
+							<li>Read the menus</li>
+						</ul>
+						<aside class="notes">Pick a thing, use it. Build your toolset.</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Intermediate</h3>
+						<ul>
+							<li>Override defaults you dont use</li>
+							<li>Bring frequent actions closer</li>
+						</ul>
+						<aside class="notes">Make your own buttons, with actions that exist. You'll know which bits you like and dont like. The default buttons are usually nice, but the actions might not be things you want to do. Whatever your needs are, find the buttons that you can't live without</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Advanced</h3>
+						<ul>
+							<li>Optimize</li>
+							<li>Add behaviours</li>
+						</ul>
+						<aside class="notes">Create your own actions. Add behaviours that doesn't exist.</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>All levels</h3>
+						<ul>
+							<li>Share (dotfiles)</li>
+							<li>Build over time</li>
+							<li>Keep optimizing</li>
+						</ul>
+						<aside class="notes">Share them with others. Theres nothing more mind blowing than seeing someone do something faster than youd imagined was possible. Anyone with dotfiles will tell you why you want to take your setup wherever you go. Its not because its cool, it takes effort to maintain. But its INFINITELY less effort that setting all your customizations up from scratch
+						</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Maintain flow</h3>
+						<aside class="notes">Theres a time delay between thinking about what you want to get done, and seeing the change on screen. The shorter that time is, the better. Your're not switching out of problem solving mode to do things. You get to maintain flow.
+						</aside>
+					</textarea>
+				</section>
+
+				<section data-markdown data-transition="slide-in fade-out" data-separator-notes="^Note:">
+					<textarea data-template>
+						<h3>Find the buttons you can't live without</h3>
+						<aside class="notes">Most importantly. The buttons you cant live without make you efficient. Whatever efficiency means for you. For me it means editing text, executing shell commands, multitasking and clean separation of concerns</aside>
+					</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: false,
+				// Hash routing for slides
+				history: true,
+				// Display a presentation progress bar
+				progress: true,
+				// // Display slide number
+				slideNumber: true,
+
+				dependencies: [
+					// Zoom in and out with Alt+click
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/markdown/marked.js' },
+					{ src: '../revealjs/plugin/markdown/markdown.js' },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+
+		 /* Reveal.addEventListener('last_slide', function( event ) {})*/
+		</script>
+	</body>
+</html>
