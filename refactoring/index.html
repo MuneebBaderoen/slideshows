@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Refactoring</title>
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <!-- Example slide -->
+				<!--
+                     <section data-transition="slide-in fade-out" >
+                     <h3>Fitts' Law</h3>
+                     <img class="stretch" src="./assets/fitts_law.png" alt="LMGTFY"></img>
+                     <aside class="notes">
+                     For anybody who has studied HCI, shoutout to Gary Marsden for teaching me. (explain the law). We want the things we do frequently to be close, we're okay with less frequent actions being far away. If you want something to be easier to do, bring it closer, or make the target bigger
+                     </aside>
+				     </section>
+                -->
+				<!-- Introduction -->
+				<section data-markdown data-transition="slide-in fade-out">
+					<h3>Refactoring</h3>
+          <p>and why you should be good at it</p>
+					<aside class="notes">
+                        The purpose of this talk is to understand the things we like about the
+                        microservice architecture, and why these concepts that work in the large
+                        can work in the small too.
+                    </aside>
+				</section>
+        <section data-markdown data-transition="slide-in fade-out">
+          <h3>Rearranging things</h3>
+          <p>skillfully</p>
+          <p>for things to occur</p>
+          <aside class="notes">
+                        The purpose of this talk is to understand the things we like about the
+                        microservice architecture, and why these concepts that work in the large
+                        can work in the small too.
+                    </aside>
+        </section>
+        <section data-markdown data-transition="slide-in fade-out">
+          <h3>We're going to tdd</h3>
+          <aside class="notes">Im going to try to write some rather ridiculous solutions for the cases. In the process I want to cover some particular topics</aside>
+        </section>
+        <section data-markdown data-transition="slide-in fade-out">
+          <h3>If this works, I could commit it</h3>
+          <aside class="notes">You could. Should you? How obvious is it to anyone else?</aside>
+        </section>
+        <section data-markdown data-transition="slide-in fade-out">
+          <h3>Should I make this last forever?</h3>
+          <aside class="notes">Or can I leave it to future me? or a future maintainer of the codebase? Is it obvious what changes would be necessary. Theres a dangerous slope of believing you can foresee all future requirements. So rather than trying to build a framework that is easily pluggable, I think it's much faster and much more powerful to write code that has been refactored, and is easy to refactor.</aside>
+        </section>
+        <section data-markdown data-transition="slide-in fade-out">
+          <h3>I had a conversation once</h3>
+          <aside class="notes">It was quite interesting, and made me reconsider a fair portion of my development style</aside>
+        </section>
+        <section data-markdown data-transition="slide-in fade-out">
+          <h3>What if I never needed to maintain code</h3>
+          <p>...and only needed to rewrite?</p>
+          <aside class="notes">What if the easiest way to include my change was to always start from scratch?</aside>
+        </section>
+
+      </div>
+		</div>
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: false,
+				// Hash routing for slides
+				history: true,
+				// Display a presentation progress bar
+				progress: true,
+				// Display slide number
+				slideNumber: true,
+
+				dependencies: [
+					// Zoom in and out with Alt+click
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/markdown/marked.js' },
+					{ src: '../revealjs/plugin/markdown/markdown.js' },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+
+		 /* Reveal.addEventListener('last_slide', function( event ) {})*/
+		</script>
+	</body>
+</html>
