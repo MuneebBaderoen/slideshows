@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Time travel</title>
+    <link rel="stylesheet" href="../revealjs/css/reveal.css">
+    <link rel="stylesheet" href="../revealjs/css/theme/black.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Example slide -->
+            <!--
+                     <section data-transition="slide-in fade-out" >
+                     <h3>Fitts' Law</h3>
+                     <img class="stretch" src="./assets/fitts_law.png" alt="LMGTFY"></img>
+                     <aside class="notes">
+                     For anybody who has studied HCI, shoutout to Gary Marsden for teaching me. (explain the law). We want the things we do frequently to be close, we're okay with less frequent actions being far away. If you want something to be easier to do, bring it closer, or make the target bigger
+                     </aside>
+				     </section>
+                -->
+            <!-- Introduction -->
+            <section data-transition="slide-in fade-out">
+                <h3>time travel</h3>
+                <p>with redux and friends</p>
+                <aside class="notes">
+                    The purpose of this talk is to shed some light on some of
+                    the tools available to developers for building amazing apps.
+                </aside>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <section data-transition="slide-in fade-out">
+                    <h3>the problems</h3>
+                    <ul>
+                        <li>slow development process</li>
+                        <li>dealing with side effects</li>
+                        <li>supporting devices we dont have</li>
+                        <li>tunnels, elevators, and villages</li>
+                    </ul>
+                    <aside class="notes">
+                        Building apps sounds pretty magical but its challenging for many many reasons.
+                        Clients are not your testers. By the time the app makes it to them, it's too late to fix it. This is contrasting with webservers and webapps, since the platform the software is running on doesn't belong to you
+                    </aside>
+                </section>
+                <section data-transition="slide-in fade-out">
+                    <h3>slow development</h3>
+                    <ul>
+                        <li>lots of recompiling</li>
+                        <li>lots of repetition to setup state</li>
+                    </ul>
+                    <aside class="notes">
+                        The experience of building step 4 of a payment process. Are you really going to make your way through the first 3 steps everytime you make a 1 character change to the code?
+                    </aside>
+                </section>
+                <section data-transition="slide-in fade-out">
+                    <h3>dealing with side effects</h3>
+                    <ul>
+                        <li>some users never kill apps</li>
+                        <li>your app will be killed at every point in its lifecycle</li>
+                        <li>we have to classify state by volatility</li>
+                    </ul>
+                    <aside class="notes">
+                        Some users keep apps running for days and weeks. These are usually the folks with enough memory on device for android/ios to take good care of them. When the os decides its time to deallocate your app, you might be in the middle of some important background task.
+                        You need to classify what state you're okay with losing, and what is critical for the app to function.
+                        Uncontrolled access to global state is a terrible idea, especially if that state only lives in memory
+                    </aside>
+                </section>
+                <section data-transition="slide-in fade-out">
+                    <h4>there are more android devices than sheep</h4>
+                    <img src="./assets/number_android_devices.png" style="max-height: 200px">
+                    <img src="./assets/number_sheep.png" style="max-height: 200px">
+                    <aside class="notes">
+                        Notes here
+                    </aside>
+                </section>
+                <section data-transition="slide-in fade-out">
+                    <h3>supporting devices we dont have</h3>
+                    <ul>
+                        <li>someone's running a homemade potato</li>
+                        <li>your app will crash</li>
+                        <li>your app will run like garbage</li>
+                    </ul>
+                    <aside class="notes">
+                        Somewhere someone has built a potato, and they've managed to install android on it. You're lucky if your manufacturer provides more than one major OS update
+                    </aside>
+                </section>
+                <section data-transition="slide-in fade-out">
+                    <h3>tunnels, elevators, and villages</h3>
+                    <ul>
+                        <li>great connectivity</li>
+                        <li>uncapped LTE/fiber</li>
+                    </ul>
+                    <aside class="notes">
+                        Notes here
+                    </aside>
+                </section>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <section data-transition="slide-in fade-out">
+                    <h3>more problems for another day</h3>
+                    <ul>
+                        <li>wifi might just be a phone hotspot</li>
+                        <li>there's no lifecycle hook for 'onUninstall'</li>
+                        <li>some people just don't update</li>
+                        <li>apk's and ipa's are just zip files</li>
+                        <li>theres a whole lot more............</li>
+                    </ul>
+                </section>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>the problems</h3>
+                <ul>
+                    <li>frontend development can be slow and frustrating</li>
+                    <li>uncontrolled side effects might be around forever</li>
+                    <li>our app will be killed at random times</li>
+                    <li>potatoes run android</li>
+                    <li>we have to consider network loss/failure</li>
+                </ul>
+                <aside class="notes">
+                    Building apps sounds pretty magical but its challenging for many many reasons.
+                    Here's what talking to a client sounds like when they report a problem. What version of the app are you running? What device are you using? What version of android/ios are you running? What were you doing when the app crashed? Can you reproduce it?
+                    Clients are not your testers. By the time the app makes it to them, it's too late to fix it. This is contrasting with webservers and webapps, since the platform the software is running on doesn't belong to you
+                </aside>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>the tools</h3>
+                <ul>
+                    <li>redux</li>
+                    <li>redux-offline</li>
+                    <li>redux-saga</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="../revealjs/lib/js/head.min.js"></script>
+    <script src="../revealjs/js/reveal.js"></script>
+    <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Hash routing for slides
+        history: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display slide number
+        slideNumber: true,
+
+        dependencies: [
+            // Zoom in and out with Alt+click
+            { src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+            { src: '../revealjs/plugin/markdown/marked.js' },
+            { src: '../revealjs/plugin/markdown/markdown.js' },
+            { src: '../revealjs/plugin/notes/notes.js', async: true },
+            { src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+
+
+    /* Reveal.addEventListener('last_slide', function( event ) {})*/
+    </script>
+</body>
+
+</html>
