@@ -16,14 +16,14 @@
         <div class="slides">
             <!-- Example slide -->
             <!--
-                     <section data-transition="slide-in fade-out" >
-                     <h3>Fitts' Law</h3>
-                     <img class="stretch" src="./assets/fitts_law.png" alt="LMGTFY"></img>
-                     <aside class="notes">
-                     For anybody who has studied HCI, shoutout to Gary Marsden for teaching me. (explain the law). We want the things we do frequently to be close, we're okay with less frequent actions being far away. If you want something to be easier to do, bring it closer, or make the target bigger
-                     </aside>
-				     </section>
-                -->
+				<section data-transition="slide-in fade-out" >
+					<h3>Fitts' Law</h3>
+					<img class="stretch" src="./assets/fitts_law.png" alt="LMGTFY"></img>
+					<aside class="notes">
+						For anybody who has studied HCI, shoutout to Gary Marsden for teaching me. (explain the law). We want the things we do frequently to be close, we're okay with less frequent actions being far away. If you want something to be easier to do, bring it closer, or make the target bigger
+					</aside>
+				</section>
+            -->
             <!-- Introduction -->
             <section data-transition="slide-in fade-out">
                 <h3>time travel</h3>
@@ -43,8 +43,7 @@
                         <li>tunnels, elevators, and villages</li>
                     </ul>
                     <aside class="notes">
-                        Building apps sounds pretty magical but its challenging for many many reasons.
-                        Clients are not your testers. By the time the app makes it to them, it's too late to fix it. This is contrasting with webservers and webapps, since the platform the software is running on doesn't belong to you
+                        Building apps sounds pretty magical but its incredibly challenging for many many reasons.
                     </aside>
                 </section>
                 <section data-transition="slide-in fade-out">
@@ -60,30 +59,25 @@
                 <section data-transition="slide-in fade-out">
                     <h3>dealing with side effects</h3>
                     <ul>
-                        <li>some users never kill apps</li>
+                        <li>some users never kill your app</li>
                         <li>your app will be killed at every point in its lifecycle</li>
                         <li>we have to classify state by volatility</li>
                     </ul>
                     <aside class="notes">
-                        Some users keep apps running for days and weeks. These are usually the folks with enough memory on device for android/ios to take good care of them. When the os decides its time to deallocate your app, you might be in the middle of some important background task.
                         You need to classify what state you're okay with losing, and what is critical for the app to function.
-                        Uncontrolled access to global state is a terrible idea, especially if that state only lives in memory
                     </aside>
                 </section>
                 <section data-transition="slide-in fade-out">
                     <h4>there are more android devices than sheep</h4>
                     <img src="./assets/number_android_devices.png" style="max-height: 200px">
                     <img src="./assets/number_sheep.png" style="max-height: 200px">
-                    <aside class="notes">
-                        Notes here
-                    </aside>
                 </section>
                 <section data-transition="slide-in fade-out">
                     <h3>supporting devices we dont have</h3>
                     <ul>
                         <li>someone's running a homemade potato</li>
+                        <li>flagship devices become microwaves over time</li>
                         <li>your app will crash</li>
-                        <li>your app will run like garbage</li>
                     </ul>
                     <aside class="notes">
                         Somewhere someone has built a potato, and they've managed to install android on it. You're lucky if your manufacturer provides more than one major OS update
@@ -95,37 +89,32 @@
                         <li>great connectivity</li>
                         <li>uncapped LTE/fiber</li>
                     </ul>
-                    <aside class="notes">
-                        Notes here
-                    </aside>
                 </section>
             </section>
             <section data-transition="slide-in fade-out">
                 <section data-transition="slide-in fade-out">
-                    <h3>more problems for another day</h3>
-                    <ul>
-                        <li>wifi might just be a phone hotspot</li>
-                        <li>there's no lifecycle hook for 'onUninstall'</li>
-                        <li>some people just don't update</li>
-                        <li>apk's and ipa's are just zip files</li>
-                        <li>theres a whole lot more............</li>
-                    </ul>
+                    <h3>there a many more possible problems</h3>
                 </section>
             </section>
             <section data-transition="slide-in fade-out">
-                <h3>the problems</h3>
+                <section data-transition="slide-in fade-out">
+                    <h3>but thats for another day</h3>
+                </section>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>today's problems</h3>
                 <ul>
                     <li>frontend development can be slow and frustrating</li>
-                    <li>uncontrolled side effects might be around forever</li>
-                    <li>our app will be killed at random times</li>
-                    <li>potatoes run android</li>
+                    <li>uncontrolled side effects might be around forever (or not long enough)</li>
+                    <li>your app will be killed at random times</li>
+                    <li>microwaves run android</li>
                     <li>we have to consider network loss/failure</li>
                 </ul>
-                <aside class="notes">
-                    Building apps sounds pretty magical but its challenging for many many reasons.
-                    Here's what talking to a client sounds like when they report a problem. What version of the app are you running? What device are you using? What version of android/ios are you running? What were you doing when the app crashed? Can you reproduce it?
-                    Clients are not your testers. By the time the app makes it to them, it's too late to fix it. This is contrasting with webservers and webapps, since the platform the software is running on doesn't belong to you
-                </aside>
+                <aside class="notes"></aside>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h4>actual microwave running android</h4>
+                <img src="./assets/android-powered-microwave.jpg" style="max-height: 200px">
             </section>
             <section data-transition="slide-in fade-out">
                 <h3>the tools</h3>
@@ -134,6 +123,52 @@
                     <li>redux-offline</li>
                     <li>redux-saga</li>
                 </ul>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>redux</h3>
+                <ul>
+                    <li>single object for your entire application state</li>
+                    <li>state is mutated only by predefined actions</li>
+                    <li>one action maps to one predefined mutation</li>
+                </ul>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>redux</h3>
+                <ul>
+                    <li>AMAZING developer tools</li>
+                </ul>
+                <aside class="notes">
+                	Im going to show you the superpowers we get from thinking about applications this way
+                </aside>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>redux-offline part 1</h3>
+                <ul>
+                    <li>redux state is serializable</li>
+                    <li>we can store it, and load it again</li>
+                    <li>potentially on a difference device</li>
+                    <li>send it on the line to developers</li>
+                    <li>reproduce issues by loading the state the customer was in</li>
+                </ul>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>redux-offline part 2</h3>
+                <ul>
+                    <li>optimistic UI, think instagram double tap</li>
+                    <li>either commit, or rollback</li>
+                    <li>request queue, retries across restarts</li>
+                </ul>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h3>redux-saga</h3>
+                <ul>
+                    <li>controlled side effects</li>
+                    <li>listen for redux actions</li>
+                    <li>create more redux actions</li>
+                </ul>
+            </section>
+            <section data-transition="slide-in fade-out">
+                <h1>demo time</h1>
             </section>
         </div>
     </div>
